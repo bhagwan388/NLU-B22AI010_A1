@@ -107,5 +107,3 @@ python B22AI010_prob4.py
 ## 📜 Originality Statement
 
 All scripts (Problem 1, 2, and 3) are implemented from scratch using only Python standard libraries as per assignment constraints. Problem 4 utilizes standard ML libraries for benchmarking purposes.
-
-```
