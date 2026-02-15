@@ -60,7 +60,7 @@ The algorithm successfully learned subword units by iteratively merging the most
 All three machine learning models achieved 100% accuracy on the test set, indicating the linear separability of the Politics and Sports domains.
 
 <p align="center">
-<img src="https://www.google.com/search?q=https://github.com/bhagwan388/NLU-B22AI010_A1/blob/main/result_photo.png%3Fraw%3Dtrue" width="800" alt="Problem 4 Results">
+<img src="Screenshot 2026-02-06 024223.png" width="800" alt="Problem 4 Results">
 </p>
 
 | Model | Accuracy | Precision | Recall | F1-Score |
