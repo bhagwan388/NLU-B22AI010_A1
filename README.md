@@ -7,7 +7,7 @@
 ---
 
 ## 📋 Project Overview
-This repository contains the full implementation for Assignment 1 of the CSL 7640 (NLU) course. The assignment involves rule-based NLP, subword tokenization (BPE), and comparative analysis of machine learning models for news classification.
+This repository contains the full implementation for Assignment 1 of the CSL 7640 (NLU) course. The assignment covers rule-based chatbots, subword tokenization (BPE), sentiment analysis, and comparative news classification.
 
 ---
 
@@ -15,8 +15,8 @@ This repository contains the full implementation for Assignment 1 of the CSL 764
 
 | Task | Filename | Description |
 | :--- | :--- | :--- |
-| **Problem 1** | `B22AI010_prob1.py` | Regex-based chatbot (Reggy++) with age and mood detection. |
-| | `B22AI010_prob1.log` | Execution log showing multiple chatbot transcripts. |
+| **Problem 1** | `B22AI010_prob1.py` | Regex-based chatbot with age calculation and mood detection. |
+| | `B22AI010_prob1.log` | Transcripts of multiple chatbot runs showing various inputs. |
 | | `B22AI010_prob1.txt` | 300-500 word reflection on chatbot naturalness. |
 | **Problem 2** | `B22AI010_prob2.py` | Byte Pair Encoding (BPE) implemented from scratch. |
 | **Problem 3** | `B22AI010_prob3.py` | Naive Bayes Sentiment Classifier with Laplace smoothing. |
@@ -25,18 +25,55 @@ This repository contains the full implementation for Assignment 1 of the CSL 764
 
 ---
 
+## 🛠️ System Requirements
+To run these scripts, ensure your environment meets the following criteria:
+* **Python Version**: Python 3.8 or higher.
+* **Standard Libraries**: `re`, `datetime`, `sys`, `collections`, `os` (no installation required).
+* **External Libraries** (Only for Problem 4): `scikit-learn`, `pandas`.
+
+```bash
+pip install scikit-learn pandas
+
+```
+
+---
+
 ## 🚀 Execution Instructions
 
+### Problem 1: Reggy++ Chatbot
+
+Run the interactive chatbot terminal:
+
+```bash
+python B22AI010_prob1.py
+
+```
+
+*Note: The chatbot will ask for your name, birthday, and mood. Ensure you test multiple date formats as documented in the log file.*
+
 ### Problem 2: BPE Tokenization
-The script takes the number of merges $k$ and the corpus file as command-line arguments:
+
+The script requires the number of merges  and the corpus file as arguments:
+
 ```bash
 python B22AI010_prob2.py 10 corpus.txt
 
 ```
 
-### Problem 4: News Classification
+### Problem 3: Naive Bayes Sentiment Analysis
 
-Run the benchmark script to compare Naive Bayes, Logistic Regression, and SVM:
+This script trains on `pos.txt` and `neg.txt` before entering an interactive mode:
+
+```bash
+python B22AI010_prob3.py
+
+```
+
+*Note: Once the "Training Complete" message appears, enter any sentence to predict its sentiment (POSITIVE/NEGATIVE).*
+
+### Problem 4: News Classification Benchmark
+
+Execute the comparative study for Politics and Sports classification:
 
 ```bash
 python B22AI010_prob4.py
@@ -49,18 +86,14 @@ python B22AI010_prob4.py
 
 ### Problem 2: BPE Subword Learning
 
-The algorithm successfully learned subword units by iteratively merging the most frequent character pairs.
-
 <p align="center">
 <img src="https://github.com/user-attachments/assets/d407dab6-862a-4933-9914-c9d9731a7a4e" width="800" alt="BPE Output Results">
 </p>
 
 ### Problem 4: Model Benchmarking
 
-All three machine learning models achieved 100% accuracy on the test set, indicating the linear separability of the Politics and Sports domains.
-
 <p align="center">
-<img src="Screenshot 2026-02-06 024223.png" width="800" alt="Problem 4 Results">
+<img src="https://www.google.com/search?q=https://github.com/bhagwan388/NLU-B22AI010_A1/blob/main/result_photo.png%3Fraw%3Dtrue" width="800" alt="Problem 4 Results">
 </p>
 
 | Model | Accuracy | Precision | Recall | F1-Score |
@@ -73,4 +106,6 @@ All three machine learning models achieved 100% accuracy on the test set, indica
 
 ## 📜 Originality Statement
 
-All code has been implemented independently following the course guidelines. No external NLP libraries were used for the scratch implementations (Problem 1, 2, and 3).
+All scripts (Problem 1, 2, and 3) are implemented from scratch using only Python standard libraries as per assignment constraints. Problem 4 utilizes standard ML libraries for benchmarking purposes.
+
+```
