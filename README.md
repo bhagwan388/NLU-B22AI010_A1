@@ -1,4 +1,4 @@
-# CSL 7640: NLU - Problem 4: News Classification Benchmark (PROBLEM 4: SPORTS OR POLITICS)
+# CSL 7640: NLU - Problem 4: News Classification Benchmark
 **Author:** Bhagwan Arsewad  
 **Roll Number:** B22AI010  
 **Project:** Sports vs. Politics News Classifier
