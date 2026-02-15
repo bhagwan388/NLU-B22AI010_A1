@@ -1,99 +1,58 @@
-# CSL 7640: Natural Language Understanding - Assignment 1
+# CSL 7640: NLU - Problem 4: News Classification Benchmark
 **Author:** Bhagwan Arsewad  
 **Roll Number:** B22AI010  
-**Institution:** IIT Jodhpur  
-**GitHub Repository:** [NLU-B22AI010_A1](https://github.com/bhagwan388/NLU-B22AI010_A1)
+**Project:** Sports vs. Politics News Classifier
 
 ---
 
-## 📋 Project Overview
-This repository contains the full implementation for Assignment 1 of the CSL 7640 (NLU) course. The assignment covers rule-based chatbots, subword tokenization (BPE), sentiment analysis, and comparative news classification.
-
----
-
-## 📂 Deliverables
-
-| Task | Filename | Description |
-| :--- | :--- | :--- |
-| **Problem 1** | `B22AI010_prob1.py` | Regex-based chatbot with age calculation and mood detection. |
-| | `B22AI010_prob1.log` | Transcripts of multiple chatbot runs showing various inputs. |
-| | `B22AI010_prob1.txt` | 300-500 word reflection on chatbot naturalness. |
-| **Problem 2** | `B22AI010_prob2.py` | Byte Pair Encoding (BPE) implemented from scratch. |
-| **Problem 3** | `B22AI010_prob3.py` | Naive Bayes Sentiment Classifier with Laplace smoothing. |
-| **Problem 4** | `B22AI010_prob4.pdf` | **6-Page Detailed Technical Report**. |
-| | `B22AI010_prob4.py` | Sports vs. Politics News Classification Benchmark. |
+## 📋 Problem Description
+This task involves building a robust text classifier to distinguish between **Sports** and **Politics** news articles. The project benchmarks three distinct machine learning architectures to evaluate their performance on domain-specific text data.
 
 ---
 
 ## 🛠️ System Requirements
-To run these scripts, ensure your environment meets the following criteria:
-* **Python Version**: Python 3.8 or higher.
-* **Standard Libraries**: `re`, `datetime`, `sys`, `collections`, `os` (no installation required).
-* **External Libraries** (Only for Problem 4): `scikit-learn`, `pandas`.
+To execute the classification script, ensure you have the following Python libraries installed:
 
 ```bash
 pip install scikit-learn pandas
 
 ```
 
+* **Python Version**: 3.8+
+* **Dependencies**: `scikit-learn` (for models), `pandas` (for data handling), `re` (for preprocessing).
+
 ---
 
 ## 🚀 Execution Instructions
 
-### Problem 1: Reggy++ Chatbot
-
-Run the interactive chatbot terminal:
-
-```bash
-python B22AI010_prob1.py
-
-```
-
-*Note: The chatbot will ask for your name, birthday, and mood. Ensure you test multiple date formats as documented in the log file.*
-
-### Problem 2: BPE Tokenization
-
-The script requires the number of merges  and the corpus file as arguments:
-
-```bash
-python B22AI010_prob2.py 10 corpus.txt
-
-```
-
-### Problem 3: Naive Bayes Sentiment Analysis
-
-This script trains on `pos.txt` and `neg.txt` before entering an interactive mode:
-
-```bash
-python B22AI010_prob3.py
-
-```
-
-*Note: Once the "Training Complete" message appears, enter any sentence to predict its sentiment (POSITIVE/NEGATIVE).*
-
-### Problem 4: News Classification Benchmark
-
-Execute the comparative study for Politics and Sports classification:
+Ensure your dataset is in the correct directory, then run the benchmark script:
 
 ```bash
 python B22AI010_prob4.py
 
 ```
 
+The script will perform the following steps:
+
+1. **Preprocessing**: Tokenization, lowercasing, and removal of special characters.
+2. **Feature Extraction**: Converting text to numerical vectors using `TfidfVectorizer`.
+3. **Training & Evaluation**: Training Naive Bayes, Logistic Regression, and Linear SVM models.
+4. **Results**: Outputting a detailed classification report for each model.
+
 ---
 
-## 📊 Experimental Results
+## 📊 Performance Results
 
-### Problem 2: BPE Subword Learning
-
-<p align="center">
-<img src="https://github.com/user-attachments/assets/d407dab6-862a-4933-9914-c9d9731a7a4e" width="800" alt="BPE Output Results">
-</p>
-
-### Problem 4: Model Benchmarking
+All three models achieved perfect separation of the classes, resulting in **100% accuracy** across the test set. This suggests that the vocabulary used in the Politics and Sports datasets is highly distinct.
 
 <p align="center">
-<img src="Screenshot 2026-02-06 024223.png" width="800" alt="Problem 4 Results">
+<img src="https://www.google.com/search?q=https://github.com/bhagwan388/NLU-B22AI010_A1/blob/main/result_photo.png%3Fraw%3Dtrue" width="850" alt="Problem 4 Terminal Results">
+
+
+
+
+
+<em>Figure: Terminal output showing 1.000 accuracy for all benchmarked models.</em>
 </p>
 
 | Model | Accuracy | Precision | Recall | F1-Score |
@@ -104,6 +63,7 @@ python B22AI010_prob4.py
 
 ---
 
-## 📜 Originality Statement
+## 📂 Included Deliverables
 
-All scripts (Problem 1, 2, and 3) are implemented from scratch using only Python standard libraries as per assignment constraints. Problem 4 utilizes standard ML libraries for benchmarking purposes.
+* `B22AI010_prob4.py`: The Python source code for the classifier.
+* `B22AI010_prob4.pdf`: A comprehensive 6-page report detailing the methodology, data distribution, and results analysis.
