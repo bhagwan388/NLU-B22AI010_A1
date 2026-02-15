@@ -46,7 +46,7 @@ The script will perform the following steps:
 All three models achieved perfect separation of the classes, resulting in **100% accuracy** across the test set. This suggests that the vocabulary used in the Politics and Sports datasets is highly distinct.
 
 <p align="center">
-<img src="https://www.google.com/search?q=https://github.com/bhagwan388/NLU-B22AI010_A1/blob/main/result_photo.png%3Fraw%3Dtrue" width="850" alt="Problem 4 Terminal Results">
+<img src="Screenshot 2026-02-06 024223.png" width="850" alt="Problem 4 Terminal Results">
 
 
 
